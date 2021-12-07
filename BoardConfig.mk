@@ -27,6 +27,21 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 
+# A/B
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_USES_RECOVERY_AS_BOOT := true
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    product \
+    system \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor
+
 # TODO(b/111434759, b/111287060) SoC specific hacks
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/lib/dsp:/dsp
 BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
