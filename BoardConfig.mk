@@ -53,3 +53,6 @@ BOARD_SEPOLICY_DIRS += build/make/target/board/generic_arm64/sepolicy
 
 # Sepolicy
 include device/mediatek/sepolicy/BoardSEPolicyConfig.mk
+
+# Inherit the proprietary files
+include vendor/rabbit/r1/BoardConfigVendor.mk
