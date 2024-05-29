@@ -28,9 +28,7 @@ PRODUCT_PACKAGES += \
 # Bootctrl
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1 \
-    android.hardware.boot@1.1-service \
-    android.hardware.boot@1.1-mtkimpl \
-    android.hardware.boot@1.1-mtkimpl.recovery
+    android.hardware.boot@1.1-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cp_system_other_odex=1
