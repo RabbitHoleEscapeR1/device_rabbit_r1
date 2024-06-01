@@ -56,5 +56,9 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
+# Step Motor
+PRODUCT_PACKAGES += \
+    StepMotorControls
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/rabbit/r1/r1-vendor.mk)

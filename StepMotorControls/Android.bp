@@ -1,0 +1,12 @@
+android_app {
+    name: "StepMotorControls",
+    srcs: [
+        "src/**/*.kt",
+        "res/**/*.xml",
+        "AndroidManifest.xml",
+    ],
+    sdk_version: "system_current",
+    package_name: "com.rabbitescape.stepmotor",
+    manifest: "AndroidManifest.xml",
+    certificate: "platform",
+}
