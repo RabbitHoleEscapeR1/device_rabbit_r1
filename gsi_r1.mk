@@ -45,6 +45,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
 # Inherit from r1 device
 $(call inherit-product, device/rabbit/r1/device.mk)
 
+# GMS
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
 
 PRODUCT_NAME := gsi_r1
 PRODUCT_DEVICE := r1
