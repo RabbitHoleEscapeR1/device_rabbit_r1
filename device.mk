@@ -8,10 +8,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 
 # Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/och1970_holl_key.kl:$(TARGET_COPY_OUT_PRODUCT)/usr/keylayout/och1970_holl_key.kl 
-
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=280
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/keylayout/och1970_holl_key.kl:$(TARGET_COPY_OUT_PRODUCT)/usr/keylayout/och1970_holl_key.kl
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -56,9 +54,18 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
+# Keyhandler
+PRODUCT_PACKAGES += \
+    KeyHandler
+
 # Step Motor
 PRODUCT_PACKAGES += \
     StepMotorControls
+
+# Overlays
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS := device/rabbit/r1
+DEVICE_PACKAGE_OVERLAYS += \
+    device/rabbit/r1/overlay
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/rabbit/r1/r1-vendor.mk)
